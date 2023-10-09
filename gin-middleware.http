@@ -1,0 +1,54 @@
+### Signup
+POST localhost:8080/auth/sign-up
+Content-Type: application/json
+
+{
+  "username": "new",
+  "email": "new@gmail.com",
+  "password": "new"
+}
+
+### Get Users
+GET localhost:8080/users
+
+### Login
+POST localhost:8080/auth/sign-in
+Content-Type: application/json
+Authorization: Bearea
+
+{
+  "email": "admin@gmail.com",
+  "password": "admin"
+}
+
+### Create post
+POST localhost:8080/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTY4MzM2MTUsImlhdCI6MTY5NjgzMDAxNSwic3ViIjoiNiJ9.OYOqwQt2skfSfwscjL2Fi1q7o5KxtkBDGPZ8HSFlUro
+
+{
+  "post_title": "new user - birinchi post title",
+  "post_body": "new user - birinchi post user tomonidan yaratildi"
+}
+
+### Get Blogs
+GET localhost:8080/posts
+
+### Get Blog
+GET localhost:8080/posts/4
+
+### Edit post
+POST localhost:8080/edit/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTY4MzQwNjcsImlhdCI6MTY5NjgzMDQ2Nywic3ViIjoiMiJ9.He284n4Rog1iBllsYcjlTCRGaqYA_Md0jz9mXp4MLsc
+
+{
+  "post_id": 2,
+  "post_title": "admin title by test",
+  "post_body": "admin body by test"
+}
+
+### Delete post
+POST localhost:8080/delete/post/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTY4MzA4MTksImlhdCI6MTY5NjgyNzIxOSwic3ViIjoiNSJ9.NmyhZbHcDujOtV5le_9leo9_zqf3sW4IqJ-kfS2G6a0
